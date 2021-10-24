@@ -48,6 +48,8 @@ namespace Superweb
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.button1 = new System.Windows.Forms.Button();
+            this.jSObjectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.alertToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -100,7 +102,8 @@ namespace Superweb
             // 
             this.objectsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addPageToolStripMenuItem,
-            this.addTextToolStripMenuItem});
+            this.addTextToolStripMenuItem,
+            this.jSObjectsToolStripMenuItem});
             this.objectsToolStripMenuItem.Name = "objectsToolStripMenuItem";
             this.objectsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.objectsToolStripMenuItem.Text = "Objects";
@@ -217,6 +220,22 @@ namespace Superweb
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // jSObjectsToolStripMenuItem
+            // 
+            this.jSObjectsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.alertToolStripMenuItem});
+            this.jSObjectsToolStripMenuItem.Name = "jSObjectsToolStripMenuItem";
+            this.jSObjectsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.jSObjectsToolStripMenuItem.Text = "JS Objects";
+            this.jSObjectsToolStripMenuItem.Click += new System.EventHandler(this.jSObjectsToolStripMenuItem_Click);
+            // 
+            // alertToolStripMenuItem
+            // 
+            this.alertToolStripMenuItem.Name = "alertToolStripMenuItem";
+            this.alertToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.alertToolStripMenuItem.Text = "alert";
+            this.alertToolStripMenuItem.Click += new System.EventHandler(this.alertToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -260,6 +279,8 @@ namespace Superweb
         private System.Windows.Forms.ToolStripMenuItem htmlEndToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bodyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem endToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem jSObjectsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem alertToolStripMenuItem;
     }
 }
 

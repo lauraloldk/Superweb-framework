@@ -19,6 +19,7 @@ namespace Superweb
         }
         Textobj txtobj = new Textobj();
         Pageobj pgobj = new Pageobj();
+        alert alert1 = new alert();
         String checkprop;
         
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -68,6 +69,13 @@ namespace Superweb
             public string Color { get; set; }
         }
 
+        class alert
+        {
+            public string Type { get; set; }
+            public string Text { get; set; }
+            
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (checkprop == "txt") 
@@ -79,6 +87,11 @@ namespace Superweb
             if(checkprop == "Page")
             {
                 richTextBox1.AppendText("<body style='background-color:" + pgobj.Color + "'>");
+            }
+
+            if (checkprop == "Alert")
+            {
+                richTextBox1.AppendText("alert('" + alert1.Text + "');");
             }
         }
 
@@ -99,6 +112,16 @@ namespace Superweb
                 {
                     MessageBox.Show("You cant change the type, or the compiler will not work");
                     pgobj.Type = "Page";
+                    propertyGrid1.Refresh();
+                }
+            }
+
+            if (checkprop == "Alert")
+            {
+                if (alert1.Type != "Alert")
+                {
+                    MessageBox.Show("You cant change the type, or the compiler will not work");
+                    alert1.Type = "Alert";
                     propertyGrid1.Refresh();
                 }
             }
@@ -125,6 +148,20 @@ namespace Superweb
         private void endToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.AppendText("</body>");
+        }
+
+        private void jSObjectsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.AppendText("<script>");
+        }
+
+        private void alertToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            propertyGrid1.SelectedObject = alert1;
+            alert1.Type = "Alert";
+            alert1.Text = "text";
+            alert1.Color = "black";
+            checkprop = "Alert";
         }
     }
 

@@ -55,6 +55,8 @@ namespace Superweb
             public string Type { get; set; }
             public string Text { get; set; }
             public string Color { get; set; }
+
+            public string p_or_h1 { get; set; }
         }
 
         class Pageobj
@@ -68,7 +70,7 @@ namespace Superweb
         {
             if (checkprop == "txt") 
             {
-                richTextBox1.AppendText("<p style='color:" + txtobj.Color + "'>" + txtobj.Text + "</p>");
+                richTextBox1.AppendText("<" +txtobj.p_or_h1 + " style='color:" + txtobj.Color + "'>" + txtobj.Text + "</p>");
             } 
             if(checkprop == "Page")
             {

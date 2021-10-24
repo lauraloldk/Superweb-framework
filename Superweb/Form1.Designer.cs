@@ -148,7 +148,7 @@ namespace Superweb
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
-            this.button1.Text = "Ok";
+            this.button1.Text = "Add code";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -182,7 +182,7 @@ namespace Superweb
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Superweb framework (build 2)";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);

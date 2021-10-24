@@ -19,6 +19,7 @@ namespace Superweb
         }
         Textobj txtobj = new Textobj();
         String checkprop;
+        
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();

@@ -34,6 +34,7 @@ namespace Superweb
             {
                 richTextBox1.SaveFile(sfd.FileName, RichTextBoxStreamType.PlainText);
             }
+            webBrowser1.Navigate(sfd.FileName);
         }
 
         private void addTextToolStripMenuItem_Click(object sender, EventArgs e)

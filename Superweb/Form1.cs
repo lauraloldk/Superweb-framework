@@ -57,6 +57,8 @@ namespace Superweb
             public string Color { get; set; }
 
             public string p_or_h1 { get; set; }
+
+            public string id { get; set; }
         }
 
         class Pageobj
@@ -70,7 +72,9 @@ namespace Superweb
         {
             if (checkprop == "txt") 
             {
-                richTextBox1.AppendText("<" +txtobj.p_or_h1 + " style='color:" + txtobj.Color + "'>" + txtobj.Text + "</p>");
+                if(txtobj.id == "") { richTextBox1.AppendText("<" + txtobj.p_or_h1 + " style='color:" + txtobj.Color + "'>" + txtobj.Text + "</p>"); }
+                if (txtobj.id != "") { richTextBox1.AppendText("<" + txtobj.p_or_h1 + " style='color:" + txtobj.Color + "' id= '" + txtobj.id + "'>"+  txtobj.Text + "</p>"); }
+
             } 
             if(checkprop == "Page")
             {

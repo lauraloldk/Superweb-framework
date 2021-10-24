@@ -112,7 +112,7 @@ namespace Superweb
         {
             propertyGrid1.SelectedObject = pgobj;
             pgobj.Type = "Page";
-            pgobj.Color = "black";
+            pgobj.Color = "white";
             checkprop = "Page";
         }
 

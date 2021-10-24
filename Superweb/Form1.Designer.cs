@@ -36,18 +36,18 @@ namespace Superweb
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.objectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addPageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addTextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.newPageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.htmlTagToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.htmlEndToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bodyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.endToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addTextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -113,13 +113,49 @@ namespace Superweb
             this.htmlEndToolStripMenuItem,
             this.bodyToolStripMenuItem});
             this.addPageToolStripMenuItem.Name = "addPageToolStripMenuItem";
-            this.addPageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addPageToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.addPageToolStripMenuItem.Text = "Page Objects";
+            // 
+            // newPageToolStripMenuItem
+            // 
+            this.newPageToolStripMenuItem.Name = "newPageToolStripMenuItem";
+            this.newPageToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.newPageToolStripMenuItem.Text = "New Page";
+            // 
+            // htmlTagToolStripMenuItem
+            // 
+            this.htmlTagToolStripMenuItem.Name = "htmlTagToolStripMenuItem";
+            this.htmlTagToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.htmlTagToolStripMenuItem.Text = "html tag";
+            this.htmlTagToolStripMenuItem.Click += new System.EventHandler(this.htmlTagToolStripMenuItem_Click);
+            // 
+            // htmlEndToolStripMenuItem
+            // 
+            this.htmlEndToolStripMenuItem.Name = "htmlEndToolStripMenuItem";
+            this.htmlEndToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.htmlEndToolStripMenuItem.Text = "html end";
+            this.htmlEndToolStripMenuItem.Click += new System.EventHandler(this.htmlEndToolStripMenuItem_Click);
+            // 
+            // bodyToolStripMenuItem
+            // 
+            this.bodyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.endToolStripMenuItem});
+            this.bodyToolStripMenuItem.Name = "bodyToolStripMenuItem";
+            this.bodyToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.bodyToolStripMenuItem.Text = "body";
+            this.bodyToolStripMenuItem.Click += new System.EventHandler(this.bodyToolStripMenuItem_Click);
+            // 
+            // endToolStripMenuItem
+            // 
+            this.endToolStripMenuItem.Name = "endToolStripMenuItem";
+            this.endToolStripMenuItem.Size = new System.Drawing.Size(94, 22);
+            this.endToolStripMenuItem.Text = "End";
+            this.endToolStripMenuItem.Click += new System.EventHandler(this.endToolStripMenuItem_Click);
             // 
             // addTextToolStripMenuItem
             // 
             this.addTextToolStripMenuItem.Name = "addTextToolStripMenuItem";
-            this.addTextToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addTextToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.addTextToolStripMenuItem.Text = "Text Objects";
             this.addTextToolStripMenuItem.Click += new System.EventHandler(this.addTextToolStripMenuItem_Click);
             // 
@@ -152,16 +188,6 @@ namespace Superweb
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(683, 394);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Add code";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.webBrowser1);
@@ -181,41 +207,15 @@ namespace Superweb
             this.webBrowser1.Size = new System.Drawing.Size(643, 380);
             this.webBrowser1.TabIndex = 0;
             // 
-            // newPageToolStripMenuItem
+            // button1
             // 
-            this.newPageToolStripMenuItem.Name = "newPageToolStripMenuItem";
-            this.newPageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.newPageToolStripMenuItem.Text = "New Page";
-            // 
-            // htmlTagToolStripMenuItem
-            // 
-            this.htmlTagToolStripMenuItem.Name = "htmlTagToolStripMenuItem";
-            this.htmlTagToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.htmlTagToolStripMenuItem.Text = "html tag";
-            this.htmlTagToolStripMenuItem.Click += new System.EventHandler(this.htmlTagToolStripMenuItem_Click);
-            // 
-            // htmlEndToolStripMenuItem
-            // 
-            this.htmlEndToolStripMenuItem.Name = "htmlEndToolStripMenuItem";
-            this.htmlEndToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.htmlEndToolStripMenuItem.Text = "html end";
-            this.htmlEndToolStripMenuItem.Click += new System.EventHandler(this.htmlEndToolStripMenuItem_Click);
-            // 
-            // bodyToolStripMenuItem
-            // 
-            this.bodyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.endToolStripMenuItem});
-            this.bodyToolStripMenuItem.Name = "bodyToolStripMenuItem";
-            this.bodyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.bodyToolStripMenuItem.Text = "body";
-            this.bodyToolStripMenuItem.Click += new System.EventHandler(this.bodyToolStripMenuItem_Click);
-            // 
-            // endToolStripMenuItem
-            // 
-            this.endToolStripMenuItem.Name = "endToolStripMenuItem";
-            this.endToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.endToolStripMenuItem.Text = "End";
-            this.endToolStripMenuItem.Click += new System.EventHandler(this.endToolStripMenuItem_Click);
+            this.button1.Location = new System.Drawing.Point(683, 394);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Add code";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -228,7 +228,7 @@ namespace Superweb
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Superweb framework (build 2)";
+            this.Text = "Superweb framework (build 3)";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);

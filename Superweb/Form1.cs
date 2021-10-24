@@ -42,7 +42,7 @@ namespace Superweb
         {
             
             propertyGrid1.SelectedObject = txtobj;
-            txtobj.Name = "txt";
+            txtobj.Type = "txt";
             txtobj.Text = "Hello World";
             txtobj.Color = "black";
             checkprop = "txt";
@@ -51,14 +51,14 @@ namespace Superweb
 
         class Textobj
         {
-            public string Name { get; set; }
+            public string Type { get; set; }
             public string Text { get; set; }
             public string Color { get; set; }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtobj.Name == "txt") 
+            if (txtobj.Type == "txt") 
             {
                 richTextBox1.AppendText("<p style='color:" + txtobj.Color + "'>" + txtobj.Text + "</p>");
             } 
@@ -68,10 +68,10 @@ namespace Superweb
         {
             if (checkprop == "txt") 
             {
-                if (txtobj.Name != "txt") 
+                if (txtobj.Type != "txt") 
                 {
-                    MessageBox.Show("You cant change the name, or the compiler will not work");
-                    txtobj.Name = "txt";
+                    MessageBox.Show("You cant change the type, or the compiler will not work");
+                    txtobj.Type = "txt";
                     propertyGrid1.Refresh();
                 }
             }   

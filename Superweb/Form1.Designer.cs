@@ -43,6 +43,11 @@ namespace Superweb
             this.button1 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.newPageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.htmlTagToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.htmlEndToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bodyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.endToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -102,15 +107,20 @@ namespace Superweb
             // 
             // addPageToolStripMenuItem
             // 
+            this.addPageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newPageToolStripMenuItem,
+            this.htmlTagToolStripMenuItem,
+            this.htmlEndToolStripMenuItem,
+            this.bodyToolStripMenuItem});
             this.addPageToolStripMenuItem.Name = "addPageToolStripMenuItem";
-            this.addPageToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
-            this.addPageToolStripMenuItem.Text = "Add Page";
+            this.addPageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addPageToolStripMenuItem.Text = "Page Objects";
             // 
             // addTextToolStripMenuItem
             // 
             this.addTextToolStripMenuItem.Name = "addTextToolStripMenuItem";
-            this.addTextToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
-            this.addTextToolStripMenuItem.Text = "Add Text";
+            this.addTextToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addTextToolStripMenuItem.Text = "Text Objects";
             this.addTextToolStripMenuItem.Click += new System.EventHandler(this.addTextToolStripMenuItem_Click);
             // 
             // tabControl1
@@ -140,7 +150,7 @@ namespace Superweb
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(629, 367);
             this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "<html>\n<body>\n\n</body>\n<html> ";
+            this.richTextBox1.Text = "";
             // 
             // button1
             // 
@@ -170,6 +180,42 @@ namespace Superweb
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.Size = new System.Drawing.Size(643, 380);
             this.webBrowser1.TabIndex = 0;
+            // 
+            // newPageToolStripMenuItem
+            // 
+            this.newPageToolStripMenuItem.Name = "newPageToolStripMenuItem";
+            this.newPageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newPageToolStripMenuItem.Text = "New Page";
+            // 
+            // htmlTagToolStripMenuItem
+            // 
+            this.htmlTagToolStripMenuItem.Name = "htmlTagToolStripMenuItem";
+            this.htmlTagToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.htmlTagToolStripMenuItem.Text = "html tag";
+            this.htmlTagToolStripMenuItem.Click += new System.EventHandler(this.htmlTagToolStripMenuItem_Click);
+            // 
+            // htmlEndToolStripMenuItem
+            // 
+            this.htmlEndToolStripMenuItem.Name = "htmlEndToolStripMenuItem";
+            this.htmlEndToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.htmlEndToolStripMenuItem.Text = "html end";
+            this.htmlEndToolStripMenuItem.Click += new System.EventHandler(this.htmlEndToolStripMenuItem_Click);
+            // 
+            // bodyToolStripMenuItem
+            // 
+            this.bodyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.endToolStripMenuItem});
+            this.bodyToolStripMenuItem.Name = "bodyToolStripMenuItem";
+            this.bodyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bodyToolStripMenuItem.Text = "body";
+            this.bodyToolStripMenuItem.Click += new System.EventHandler(this.bodyToolStripMenuItem_Click);
+            // 
+            // endToolStripMenuItem
+            // 
+            this.endToolStripMenuItem.Name = "endToolStripMenuItem";
+            this.endToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.endToolStripMenuItem.Text = "End";
+            this.endToolStripMenuItem.Click += new System.EventHandler(this.endToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -209,6 +255,11 @@ namespace Superweb
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.ToolStripMenuItem newPageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem htmlTagToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem htmlEndToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bodyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem endToolStripMenuItem;
     }
 }
 

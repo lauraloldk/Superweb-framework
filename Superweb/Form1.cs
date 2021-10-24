@@ -18,6 +18,7 @@ namespace Superweb
             InitializeComponent();
         }
         Textobj txtobj = new Textobj();
+        Pageobj pgobj = new Pageobj();
         String checkprop;
         
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -56,12 +57,23 @@ namespace Superweb
             public string Color { get; set; }
         }
 
+        class Pageobj
+        {
+            public string Type { get; set; }
+            
+            public string Color { get; set; }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtobj.Type == "txt") 
+            if (checkprop == "txt") 
             {
                 richTextBox1.AppendText("<p style='color:" + txtobj.Color + "'>" + txtobj.Text + "</p>");
             } 
+            if(checkprop == "Page")
+            {
+                richTextBox1.AppendText("<body style='background-color:" + pgobj.Color + "'>");
+            }
         }
 
         private void propertyGrid1_PropertyValueChanged(object s, PropertyValueChangedEventArgs e)
@@ -74,7 +86,39 @@ namespace Superweb
                     txtobj.Type = "txt";
                     propertyGrid1.Refresh();
                 }
-            }   
+            }
+            if (checkprop == "Page")
+            {
+                if (pgobj.Type != "Page")
+                {
+                    MessageBox.Show("You cant change the type, or the compiler will not work");
+                    pgobj.Type = "Page";
+                    propertyGrid1.Refresh();
+                }
+            }
+        }
+
+        private void htmlTagToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.AppendText("<html>");
+        }
+
+        private void htmlEndToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.AppendText("</html>");
+        }
+
+        private void bodyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            propertyGrid1.SelectedObject = pgobj;
+            pgobj.Type = "Page";
+            pgobj.Color = "black";
+            checkprop = "Page";
+        }
+
+        private void endToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.AppendText("</body>");
         }
     }
 

@@ -177,7 +177,7 @@ namespace Superweb
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(643, 380);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "index.html";
+            this.tabPage1.Text = "Code";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // richTextBox1

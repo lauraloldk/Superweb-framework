@@ -160,7 +160,7 @@ namespace Superweb
             propertyGrid1.SelectedObject = alert1;
             alert1.Type = "Alert";
             alert1.Text = "text";
-            alert1.Color = "black";
+            
             checkprop = "Alert";
         }
     }

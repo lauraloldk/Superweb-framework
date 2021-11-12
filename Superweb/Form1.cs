@@ -80,8 +80,8 @@ namespace Superweb
         {
             if (checkprop == "txt") 
             {
-                if(txtobj.id == "") { richTextBox1.AppendText("<" + txtobj.p_or_h1 + " style='color:" + txtobj.Color + "'>" + txtobj.Text + "</p>"); }
-                if (txtobj.id != "") { richTextBox1.AppendText("<" + txtobj.p_or_h1 + " style='color:" + txtobj.Color + "' id= '" + txtobj.id + "'>"+  txtobj.Text + "</p>"); }
+                if(txtobj.id == "") { richTextBox1.AppendText("<" + txtobj.p_or_h1 + " style='color:" + txtobj.Color + "'>" + txtobj.Text + "</" + txtobj.p_or_h1 + ">"); }
+                if (txtobj.id != "") { richTextBox1.AppendText("<" + txtobj.p_or_h1 + " style='color:" + txtobj.Color + "' id= '" + txtobj.id + "'>"+ txtobj.Text + "</"+ txtobj.p_or_h1 + ">"); }
 
             } 
             if(checkprop == "Page")
